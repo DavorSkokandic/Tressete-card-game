@@ -7,7 +7,8 @@
 int main()
 {
 	Deck deck;
-	//commented out to avoid printing the deck
-	int a;
+	
+	deck.Shuffle();
+	deck.PrintDeck();
 	return 0;
 }

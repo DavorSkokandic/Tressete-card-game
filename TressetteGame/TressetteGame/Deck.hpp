@@ -11,6 +11,8 @@ public:
 	Deck();
 	~Deck();
 
+	void Shuffle();
+	void PrintDeck();
 
 
 private:

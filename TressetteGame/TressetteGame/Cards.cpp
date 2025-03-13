@@ -48,7 +48,7 @@ int Cards::getFaceValue()
 void Cards::PrintCard()
 {	
 	if (rank <= 7)
-		cout << rank <<" ";
+		cout << rank << " ";
 
 	else if (rank == FANAT)
 		cout << "Fanat" <<" ";
@@ -63,14 +63,14 @@ void Cards::PrintCard()
 		cout << "Ace"<<" ";
 
 	if (suit == COPPE)
-		cout << "Coppe"<<endl;
+		cout << "Coppe";
 
 	else if (suit == SPADE)
-		cout << "Spade" << endl;
+		cout << "Spade";
 
 	else if (suit == DENARI)
-		cout << "Denari" << endl;
+		cout << "Denari";
 
 	else if (suit == BASTONI)
-		cout << "Bastoni" << endl;
+		cout << "Bastoni";
 }
