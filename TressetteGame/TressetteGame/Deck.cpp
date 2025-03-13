@@ -14,8 +14,8 @@ Deck::Deck()
 		{
 			deck.push_back(new Cards(r, s));
 			Cards* card = new Cards(r, s);
-			card->PrintCard();
-			cout << endl;
+			//card->PrintCard();
+			//cout << endl;
 		}
 	}
 }
@@ -43,4 +43,16 @@ void Deck::PrintDeck()
 		card->PrintCard();
 		cout << endl;
 	}
+}
+
+Cards* Deck::DrawCard()
+{
+	if (deck.empty())
+	{
+		cout << "Deck is empty" << endl;
+		return nullptr;
+	}
+	Cards* drawnCard = deck.back();
+	deck.pop_back();
+	return drawnCard;
 }

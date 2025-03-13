@@ -13,6 +13,7 @@ public:
 
 	void Shuffle();
 	void PrintDeck();
+	Cards* DrawCard();
 
 
 private:
