@@ -2,6 +2,7 @@
 #include <vector>
 #include "Cards.hpp"
 #include "Deck.hpp"
+#include "Game.hpp"
 
 using namespace std;
 class Player
@@ -13,8 +14,13 @@ public:
 	void PrintPlayerHand();
 	void PlayCard();
 	void DrawCard(Deck &deck);
+	void AddCardToHand(Cards* card);
+	Cards* GetLastPlayedCard() const;
+	const std::vector<Cards*>& getHand() const { return hand; }
+
 	
 
 private:
 	vector <Cards*> hand;
+	Cards* lastPlayedCard;
 };

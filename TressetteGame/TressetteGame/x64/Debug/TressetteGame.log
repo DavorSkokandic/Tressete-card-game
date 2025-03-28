@@ -1,10 +1,1 @@
-﻿  Main.cpp
-C:\Users\kpkov\OneDrive\Desktop\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
-  (compiling source file 'Main.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\stdexcept(100,19):
-      see declaration of 'std::runtime_error'
-      C:\Users\kpkov\OneDrive\Desktop\SFML-3.0.0\include\SFML\System\Exception.hpp(41,23):
-      see declaration of 'sf::Exception'
-  
-C:\Users\kpkov\OneDrive\Desktop\Tressette-C++\TressetteGame\TressetteGame\Main.cpp(10,9): warning C4101: 'card': unreferenced local variable
-  TressetteGame.vcxproj -> C:\Users\kpkov\OneDrive\Desktop\Tressette-C++\TressetteGame\x64\Debug\TressetteGame.exe
+﻿  TressetteGame.vcxproj -> C:\Users\kpkov\OneDrive\Desktop\Tressette-C++\TressetteGame\x64\Debug\TressetteGame.exe
