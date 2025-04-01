@@ -1,5 +1,6 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include "Cards.hpp"
 #include "Deck.hpp"
 #include "Player.hpp"
 #include "Game.hpp"

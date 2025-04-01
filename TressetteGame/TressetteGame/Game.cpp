@@ -32,7 +32,7 @@ void Game::StartGame()
 {
 	vector<Cards*> hand = player2->getHand();
 	
-	for (int i = 0; i <19; i++)
+	for (int i = 0; i <20; i++)
 	{
 		PlayRound();
 	}
@@ -46,37 +46,76 @@ void Game::StartGame()
 void Game::PlayRound()
 {
 	playedCards.clear();
+	player1->sortHand();
+	player2->sortHand();
 	cout << "Round " << roundNumber << endl;
+	cout << endl;
 	
 	cout << "Player 1 turn: " << endl;
 	player1->PrintPlayerHand();
 	player1->PlayCard();
 	Cards* playedCard1 = player1->GetLastPlayedCard();
 	cout << "Player 1 played: ";
+	cout << endl;
 	playedCard1->PrintCard();
 	cout << endl;
 	if (playedCard1)
 	{
 		playedCards.push_back(playedCard1);
 	}
-
+	cout << endl;
 	cout << "Player 2 turn: " << endl;
 	player2->PrintPlayerHand();
-	player2->PlayCard();
-	Cards* playedCard2 = player2->GetLastPlayedCard();
-	cout << "Player 2 played: ";
-	playedCard2->PrintCard();
-	cout << endl;
-	if (playedCard2)
+	bool hasMatchingSuit = false;
+
+	// **Check if Player 2 has a card with the same suit as Player 1's played card**
+	for (Cards* card : player2->getHand())
 	{
-		playedCards.push_back(playedCard2);
+		if (card->getSuit() == playedCard1->getSuit())
+		{
+			hasMatchingSuit = true;
+			break;
+		}
 	}
 
+	// **Player 2 must choose a valid card based on the rule**
+	while (true)
+	{
+		player2->PlayCard();
+		Cards* playedCard2 = player2->GetLastPlayedCard();
+
+		// If Player 2 has a matching suit but didn't play it, ask them to choose again
+		if (hasMatchingSuit && playedCard2->getSuit() != playedCard1->getSuit())
+		{
+			cout << "You have a card of the same suit as Player 1. You must play it!" << endl;
+			player2->AddCardToHand(playedCard2); // Return the invalid card to hand
+			player2->PrintPlayerHand();
+			continue;
+		}
+
+		// Valid play
+		cout << "Player 2 played: ";
+		cout << endl;
+		playedCard2->PrintCard();
+		cout << endl;
+		playedCards.push_back(playedCard2);
+		break;
+	}
+	//Cards* playedCard2 = player2->GetLastPlayedCard();
+	//cout << "Player 2 played: ";
+	//playedCard2->PrintCard();
+	//cout << endl;
+	//if (playedCard2)
+	//{
+	//	playedCards.push_back(playedCard2);
+	//}
+
 	Player* roundWinner = EvaluateRound();
+	DisplayScore();
 	cout << "Round winner: " << (roundWinner == player1 ? "Player 1" : "Player 2") << endl;
 	currentPlayer = roundWinner;
 
-	if (roundNumber < 10)
+	if (roundNumber <= 10)
 	{
 		Cards* card1 = deck.DrawCard();
 		player1->AddCardToHand(card1);
@@ -129,35 +168,61 @@ Player* Game::EvaluateRound()
 			}
 		};
 
+
 	int strength1 = getCardStrength(firstCard);
 	int strength2 = getCardStrength(secondCard);
 
-	// Check if player 2 has the same suit as player 1
+	Player* roundWinner = nullptr;
+
+	// Check if player 2 played the same suit as player 1
 	bool player2HasSameSuit = false;
-	for (Cards* card : player2->getHand())
+	if (secondCard->getSuit() == firstCard->getSuit())
 	{
-		if (card->getSuit() == firstCard->getSuit())
-		{
-			player2HasSameSuit = true;
-			break;
-		}
+		player2HasSameSuit = true;
 	}
 
-	// If player 2 does not have the same suit, player 1 wins
+	// If player 2 did not play the same suit, player 1 wins
 	if (!player2HasSameSuit)
 	{
-		return player1;
+		roundWinner = player1;
+		
 	}
 
 	// If both players played the same suit, compare strength
-	if (secondCard->getSuit() == firstCard->getSuit())
+	else if (secondCard->getSuit() == firstCard->getSuit())
 	{
-		return (strength1 > strength2) ? player1 : player2;
+		roundWinner = (strength1 > strength2) ? player1 : player2;
+		(strength1 > strength2) ? player1 : player2;
 	}
 	else
 	{
-		return currentPlayer;
+		roundWinner = currentPlayer;
+		//return currentPlayer;
 	}
+
+	double roundPoints = 0.0;
+	 for (Cards* card: playedCards)
+	 {
+		 roundPoints += CalculateCardPoints(card);
+	 }
+	 if(roundWinner == player1)
+	 {
+		 player1Score += roundPoints;
+	 }
+	 if (roundWinner == player2)
+	 {
+		 player2Score += roundPoints;
+	 }
+	 if(roundNumber == 18)
+	 {
+		 if (roundWinner == player1)
+			 player1Score += 1;
+		 else
+			 player2Score += 1;
+	 }
+	 currentPlayer = roundWinner;
+
+	 return roundWinner;
 }
 
 void Game::NextTurn()
@@ -178,11 +243,11 @@ void Game::DisplayScore()
 			}
 			else if (decimal == 1.0/3.0)
 			{
-				cout << " " << "1/3 ";
+				cout << whole << " " << "1/3 ";
 			}
 			else if (decimal == 2.0 / 3.0)
 			{
-				cout  << " " << "2/3 ";
+				cout << whole << " " << "2/3 ";
 			}
 			else
 			{
@@ -224,7 +289,7 @@ void Game::UpdateScore(Player* roundWinner)
 	DisplayScore();
 
 	// Add 1 extra point for the player who wins the last round
-	if (roundNumber == 20)
+	if (roundNumber == 19)
 	{
 		if (roundWinner == player1)
 			player1Score += 1;

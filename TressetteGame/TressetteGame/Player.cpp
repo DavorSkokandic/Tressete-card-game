@@ -80,4 +80,48 @@ Cards* Player::GetLastPlayedCard() const
 	return lastPlayedCard;
 }
 
+void Player::sortHand()
+{
+	auto getCardStrength = [](Cards* card) -> int
+		{
+			switch (card->getRank())
+			{
+			case Cards::THREE: return 10;
+			case Cards::TWO:   return 9;
+			case Cards::ACE:   return 8;
+			case Cards::KING:  return 7;
+			case Cards::HORSE: return 6;
+			case Cards::FANAT: return 5;
+			case Cards::SEVEN: return 4;
+			case Cards::SIX:   return 3;
+			case Cards::FIVE:  return 2;
+			case Cards::FOUR:  return 1;
+			default: return 0;
+			}
+	};
+
+	for (int i = 0; i<10; i++)
+	{
+		for (int j = 0; j < 10; j++) 
+		{
+			hand[i]->getSuit();
+			if (hand[i]->getSuit() < hand[j]->getSuit())
+			{
+				Cards* temp = hand[i];
+				hand[i] = hand[j];
+				hand[j] = temp;
+			}
+			else if (hand[i]->getSuit() == hand[j]->getSuit() && getCardStrength(hand[i]) > getCardStrength(hand[j]))
+			{
+				Cards* temp = hand[i];
+				hand[i] = hand[j];
+				hand[j] = temp;
+			}	
+			
+		}
+	}
+
+
+}
+
  

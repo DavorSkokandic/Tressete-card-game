@@ -17,6 +17,7 @@ public:
 	void AddCardToHand(Cards* card);
 	Cards* GetLastPlayedCard() const;
 	const std::vector<Cards*>& getHand() const { return hand; }
+	void sortHand();
 
 	
 
