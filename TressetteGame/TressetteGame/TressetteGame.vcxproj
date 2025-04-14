@@ -147,6 +147,9 @@
     <ClInclude Include="Game.hpp" />
     <ClInclude Include="Player.hpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Main_design.qml" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
