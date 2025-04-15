@@ -1,0 +1,9 @@
+-rootPath
+C:/Users/kpkov/OneDrive/Desktop/Tressette-C++/TressetteGame
+-cmake-output
+-output-file
+C:/Users/kpkov/OneDrive/Desktop/Tressette-C++/TressetteGame/out/build/x64-debug/.qt/qml_imports/TressetteGame_conf.cmake
+-importPath
+C:/Users/kpkov/OneDrive/Desktop/Tressette-C++/TressetteGame/out/build/x64-debug
+-importPath
+C:/Qt/6.9.0/msvc2022_64/qml

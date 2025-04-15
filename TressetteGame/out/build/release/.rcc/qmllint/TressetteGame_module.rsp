@@ -1,0 +1,10 @@
+-I
+C:/Users/kpkov/OneDrive/Desktop/Tressette-C++/TressetteGame/out/build/release
+-I
+C:/Qt/6.9.0/msvc2022_64/qml
+--resource
+C:/Users/kpkov/OneDrive/Desktop/Tressette-C++/TressetteGame/out/build/release/.qt/rcc/qmake_Tressette.qrc
+--resource
+C:/Users/kpkov/OneDrive/Desktop/Tressette-C++/TressetteGame/out/build/release/.qt/rcc/TressetteGame_raw_qml_0.qrc
+--module
+Tressette

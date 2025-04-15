@@ -1,0 +1,195 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Release-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "TressetteGame",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "TressetteGame::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-TressetteGame-Release-9db76b7650ed97192f29.json",
+					"name" : "TressetteGame",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "TressetteGame_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-TressetteGame_autogen-Release-91eedf90ff043b699195.json",
+					"name" : "TressetteGame_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "TressetteGame_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-TressetteGame_autogen_timestamp_deps-Release-d27e9d5008a903b1d7fd.json",
+					"name" : "TressetteGame_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "TressetteGame_copy_qml::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-TressetteGame_copy_qml-Release-805070500ce68896b391.json",
+					"name" : "TressetteGame_copy_qml",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "TressetteGame_copy_res::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-TressetteGame_copy_res-Release-6d01c0b1a7315f0d3ebf.json",
+					"name" : "TressetteGame_copy_res",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "TressetteGame_other_files::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-TressetteGame_other_files-Release-ea0957713518ca5f0a00.json",
+					"name" : "TressetteGame_other_files",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "TressetteGame_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-TressetteGame_qmllint-Release-ddec3fc76c072910beba.json",
+					"name" : "TressetteGame_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "TressetteGame_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-TressetteGame_qmllint_json-Release-5247f6e4024da6b1e82c.json",
+					"name" : "TressetteGame_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "TressetteGame_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-TressetteGame_qmllint_module-Release-f1d7f6c03fb6308ed055.json",
+					"name" : "TressetteGame_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "TressetteGame_qmltyperegistration::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-TressetteGame_qmltyperegistration-Release-007c78d8d4e1881dbe4e.json",
+					"name" : "TressetteGame_qmltyperegistration",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_aotstats::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_aotstats-Release-ce7e40f37727ae127bd8.json",
+					"name" : "all_aotstats",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint-Release-ab480133899679c3cfe0.json",
+					"name" : "all_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_json-Release-3bcfaf0df7e62c59379a.json",
+					"name" : "all_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_module-Release-f1a5c179ccb663c0d2ae.json",
+					"name" : "all_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmltyperegistrations::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmltyperegistrations-Release-6105fedf629553795e84.json",
+					"name" : "all_qmltyperegistrations",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "module_TressetteGame_aotstats_target::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-module_TressetteGame_aotstats_target-Release-c5c0e9adc6d63db5b6d6.json",
+					"name" : "module_TressetteGame_aotstats_target",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/kpkov/OneDrive/Desktop/Tressette-C++/TressetteGame/out/build/release",
+		"source" : "C:/Users/kpkov/OneDrive/Desktop/Tressette-C++/TressetteGame"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

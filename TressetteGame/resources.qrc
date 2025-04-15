@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>TressetteGame/Main_design.qml</file>
+    </qresource>
+</RCC>

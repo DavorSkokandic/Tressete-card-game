@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/">
+    <file alias="/Tressette">C:/Users/kpkov/OneDrive/Desktop/Tressette-C++/TressetteGame/out/build/release/Tressette</file>
+
+  </qresource>
+</RCC>

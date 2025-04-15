@@ -1,0 +1,5 @@
+module Tressette
+typeinfo TressetteGame.qmltypes
+prefer :/Tressette/
+Main_design 1.0 TressetteGame/Main_design.qml
+

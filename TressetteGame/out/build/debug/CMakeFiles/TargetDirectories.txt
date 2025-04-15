@@ -1,0 +1,5 @@
+C:/Users/kpkov/OneDrive/Desktop/Tressette-C++/TressetteGame/out/build/debug/CMakeFiles/TressetteGame.dir
+C:/Users/kpkov/OneDrive/Desktop/Tressette-C++/TressetteGame/out/build/debug/CMakeFiles/edit_cache.dir
+C:/Users/kpkov/OneDrive/Desktop/Tressette-C++/TressetteGame/out/build/debug/CMakeFiles/rebuild_cache.dir
+C:/Users/kpkov/OneDrive/Desktop/Tressette-C++/TressetteGame/out/build/debug/CMakeFiles/TressetteGame_autogen_timestamp_deps.dir
+C:/Users/kpkov/OneDrive/Desktop/Tressette-C++/TressetteGame/out/build/debug/CMakeFiles/TressetteGame_autogen.dir

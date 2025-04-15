@@ -2,13 +2,12 @@
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 
-Item {
+Window {
     id: appRoot
-    anchors.fill: parent
-    focus: true
-    antialiasing: false
+    visible: true
     width: 1920
     height: 1080
+    title: "Tressette Game"
 
     property real baseWidth: 1920
     property real baseHeight: 1080
@@ -17,20 +16,13 @@ Item {
     signal playClicked
     signal rulesClicked
     signal exitClicked
-    
 
     Rectangle {
         anchors.fill: parent
         color: "#1e2a38"
         gradient: Gradient {
-            GradientStop {
-                position: 0.0
-                color: "#2c3e50"
-            }
-            GradientStop {
-                position: 1.0
-                color: "#34495e"
-            }
+            GradientStop { position: 0.0; color: "#2c3e50" }
+            GradientStop { position: 1.0; color: "#34495e" }
         }
 
         ColumnLayout {
@@ -40,9 +32,9 @@ Item {
 
             // Title
             Item {
+                Layout.alignment: Qt.AlignHCenter
                 width: titleText.width + 6 * appRoot.scaleFactor
                 height: titleText.height + 6 * appRoot.scaleFactor
-                Layout.alignment: Qt.AlignHCenter
 
                 Text {
                     id: titleShadow
@@ -70,24 +62,14 @@ Item {
                 width: 300 * appRoot.scaleFactor
                 height: 70 * appRoot.scaleFactor
                 radius: 16 * appRoot.scaleFactor
-
                 property bool hovered: false
                 property bool pressed: false
-
                 color: hovered ? "#1abc9c" : "#16a085"
                 border.color: Qt.darker(color, 1.2)
                 border.width: pressed ? 3 : 2
 
-                Behavior on color {
-                    ColorAnimation {
-                        duration: 200
-                    }
-                }
-                Behavior on border.width {
-                    NumberAnimation {
-                        duration: 150
-                    }
-                }
+                Behavior on color { ColorAnimation { duration: 200 } }
+                Behavior on border.width { NumberAnimation { duration: 150 } }
 
                 Text {
                     text: "Play"
@@ -100,14 +82,11 @@ Item {
                 MouseArea {
                     anchors.fill: parent
                     hoverEnabled: true
-
-                    onEntered: parent.hovered = true
-                    onExited: parent.hovered = false
-
-                    onPressed: parent.pressed = true
-
-                    onReleased: parent.pressed = false
-                    //appRoot.playClicked();
+                    onEntered: hovered = true
+                    onExited: hovered = false
+                    onPressed: pressed = true
+                    onReleased: pressed = false
+                    onClicked: playClicked() // Emit the playClicked signal
                 }
             }
 
@@ -116,24 +95,14 @@ Item {
                 width: 300 * appRoot.scaleFactor
                 height: 70 * appRoot.scaleFactor
                 radius: 16 * appRoot.scaleFactor
-
                 property bool hovered: false
                 property bool pressed: false
-
                 color: hovered ? "#3498db" : "#2980b9"
                 border.color: Qt.darker(color, 1.2)
                 border.width: pressed ? 3 : 2
 
-                Behavior on color {
-                    ColorAnimation {
-                        duration: 200
-                    }
-                }
-                Behavior on border.width {
-                    NumberAnimation {
-                        duration: 150
-                    }
-                }
+                Behavior on color { ColorAnimation { duration: 200 } }
+                Behavior on border.width { NumberAnimation { duration: 150 } }
 
                 Text {
                     text: "Rules"
@@ -146,15 +115,11 @@ Item {
                 MouseArea {
                     anchors.fill: parent
                     hoverEnabled: true
-
-                    onEntered: parent.hovered = true
-
-                    onExited: parent.hovered = false
-
-                    onPressed: parent.pressed = true
-
-                    onReleased: parent.pressed = false
-                    //appRoot.rulesClicked();
+                    onEntered: hovered = true
+                    onExited: hovered = false
+                    onPressed: pressed = true
+                    onReleased: pressed = false
+                    onClicked: rulesClicked() // Emit the rulesClicked signal
                 }
             }
 
@@ -163,24 +128,14 @@ Item {
                 width: 300 * appRoot.scaleFactor
                 height: 70 * appRoot.scaleFactor
                 radius: 16 * appRoot.scaleFactor
-
                 property bool hovered: false
                 property bool pressed: false
-
                 color: hovered ? "#e74c30" : "#C03920"
                 border.color: Qt.darker(color, 1.2)
                 border.width: pressed ? 3 : 2
 
-                Behavior on color {
-                    ColorAnimation {
-                        duration: 200
-                    }
-                }
-                Behavior on border.width {
-                    NumberAnimation {
-                        duration: 150
-                    }
-                }
+                Behavior on color { ColorAnimation { duration: 200 } }
+                Behavior on border.width { NumberAnimation { duration: 150 } }
 
                 Text {
                     text: "Exit"
@@ -193,18 +148,13 @@ Item {
                 MouseArea {
                     anchors.fill: parent
                     hoverEnabled: true
-
-                    onEntered: parent.hovered = true
-
-                    onExited: parent.hovered = false
-
-                    onPressed: parent.pressed = true
-
-                    onReleased: parent.pressed = false
-                    //  appRoot.exitClicked();
+                    onEntered: hovered = true
+                    onExited: hovered = false
+                    onPressed: pressed = true
+                    onReleased: released = false
+                    onClicked: exitClicked() // Emit the exitClicked signal
                 }
             }
         }
-    } 
-    
+    }
 }
