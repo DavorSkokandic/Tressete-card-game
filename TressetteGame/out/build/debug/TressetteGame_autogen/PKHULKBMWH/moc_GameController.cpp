@@ -39,18 +39,18 @@ template <> constexpr inline auto GameController::qt_create_metaobjectdata<qt_me
     namespace QMC = QtMocConstants;
     QtMocHelpers::StringRefStorage qt_stringData {
         "GameController",
-        "openPlayingTable",
+        "playClicked",
         "",
-        "openRulesWindow",
-        "exitGame"
+        "rulesClicked",
+        "exitClicked"
     };
 
     QtMocHelpers::UintData qt_methods {
-        // Slot 'openPlayingTable'
+        // Slot 'playClicked'
         QtMocHelpers::SlotData<void()>(1, 2, QMC::AccessPublic, QMetaType::Void),
-        // Slot 'openRulesWindow'
+        // Slot 'rulesClicked'
         QtMocHelpers::SlotData<void()>(3, 2, QMC::AccessPublic, QMetaType::Void),
-        // Slot 'exitGame'
+        // Slot 'exitClicked'
         QtMocHelpers::SlotData<void()>(4, 2, QMC::AccessPublic, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
@@ -75,9 +75,9 @@ void GameController::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
     auto *_t = static_cast<GameController *>(_o);
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: _t->openPlayingTable(); break;
-        case 1: _t->openRulesWindow(); break;
-        case 2: _t->exitGame(); break;
+        case 0: _t->playClicked(); break;
+        case 1: _t->rulesClicked(); break;
+        case 2: _t->exitClicked(); break;
         default: ;
         }
     }

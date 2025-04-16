@@ -4,7 +4,7 @@
 
 GameController::GameController(QObject* parent) : QObject(parent) {}
 
-void GameController::openPlayingTable() {
+void GameController::playClicked() {
     if (!gameView) {
         gameView = new QQuickView();
         gameView->setSource(QUrl("qrc:/PlayingTable.qml"));
@@ -20,7 +20,7 @@ void GameController::openPlayingTable() {
     // Initialize game state if needed
 }
 
-void GameController::openRulesWindow() {
+void GameController::rulesClicked() {
     if (!rulesView) {
         rulesView = new QQuickView();
         rulesView->setSource(QUrl("qrc:/Rules.qml"));
@@ -36,7 +36,7 @@ void GameController::openRulesWindow() {
     qDebug() << "Opening rules window...";
 }
 
-void GameController::exitGame() {
+void GameController::exitClicked() {
     qDebug() << "Exiting game...";
     QGuiApplication::quit();
 }

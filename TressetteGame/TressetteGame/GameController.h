@@ -9,9 +9,9 @@ public:
     GameController(QObject* parent = nullptr);
 
 public slots:
-    void openPlayingTable();
-    void openRulesWindow();
-    void exitGame();
+    void playClicked();
+    void rulesClicked();
+    void exitClicked();
 
 private:
     QQuickView* rulesView = nullptr;

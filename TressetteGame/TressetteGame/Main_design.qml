@@ -2,7 +2,7 @@
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 
-Window {
+ApplicationWindow {
     id: appRoot
     visible: true
     width: 1920
@@ -82,6 +82,8 @@ Window {
                 MouseArea {
                     anchors.fill: parent
                     hoverEnabled: true
+                    enabled: true
+                    cursorShape: Qt.PointingHandCursor
                     onEntered: hovered = true
                     onExited: hovered = false
                     onPressed: pressed = true
@@ -115,6 +117,8 @@ Window {
                 MouseArea {
                     anchors.fill: parent
                     hoverEnabled: true
+                    enabled: true
+                    cursorShape: Qt.PointingHandCursor
                     onEntered: hovered = true
                     onExited: hovered = false
                     onPressed: pressed = true
@@ -148,6 +152,8 @@ Window {
                 MouseArea {
                     anchors.fill: parent
                     hoverEnabled: true
+                    enabled: true
+                    cursorShape: Qt.PointingHandCursor
                     onEntered: hovered = true
                     onExited: hovered = false
                     onPressed: pressed = true

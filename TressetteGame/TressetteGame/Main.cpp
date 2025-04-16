@@ -11,10 +11,10 @@
 int main(int argc, char* argv[]) {
     QGuiApplication app(argc, argv);
     QQmlApplicationEngine engine;
-
+	//QQuickStyle::setStyle("Material"); // Set the style to Fusion
     // Create an instance of your GameController
     GameController gameController;
-
+ 
     // Expose the gameController object to QML
     engine.rootContext()->setContextProperty("gameController", &gameController);
 
@@ -36,9 +36,9 @@ int main(int argc, char* argv[]) {
 		return -1;
 	}
 
-	QObject::connect(rootObject, SIGNAL(openPlayingTable()), &gameController, SLOT(openPlayingTable()));//Sending signal to open the playing table
-	QObject::connect(rootObject, SIGNAL(openRulesWindow()), &gameController, SLOT(openRulesWindow()));//Sending signal to open the rules window
-	QObject::connect(rootObject, SIGNAL(exitGame()), &gameController, SLOT(exitGame()));//Sending signal to exit the game
+	QObject::connect(rootObject, SIGNAL(playClicked()), &gameController, SLOT(playClicked()));//Sending signal to open the playing table
+	QObject::connect(rootObject, SIGNAL(rulesClicked()), &gameController, SLOT(rulesClicked()));//Sending signal to open the rules window
+	QObject::connect(rootObject, SIGNAL(exitClicked()), &gameController, SLOT(exitClicked()));//Sending signal to exit the game
 
    
     return app.exec();
